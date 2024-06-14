@@ -1,0 +1,145 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;
+ transition: transform .5s ease;
+}
+
+ .owl-carousel .item:hover{
+    /* border: 1px solid black; */
+    transform : scale(1.1);
+}
+
+/* .owl-carousel img{
+    transition: transform .5s ease;
+  }
+ .owl-carousel img:hover{
+    
+    transform : scale(1.25);
+} */
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+
+
+
+
+.buttermilk{
+    background-color:#fff;background-image:linear-gradient(#fff7ef, #fff);
+    background-image:-webkit-linear-gradient(#fff7ef, #fff);
+    background-image:-moz-linear-gradient(#fff7ef, #fff);
+    background-image:-ms-linear-gradient(#fff7ef, #fff);
+    background-image:-o-linear-gradient(#fff7ef, #fff);
+    padding:50px 40px;
+    border:1px solid #efe8e1;
+    padding-bottom:20px;
+}
+
+.smbg{
+    background-color:#fff;
+    background-image:linear-gradient(rgba(110, 69, 143, 0.1), #fff);
+    background-image:-webkit-linear-gradient(rgba(110, 69, 143, 0.1), #fff);
+    background-image:-moz-linear-gradient(rgba(110, 69, 143, 0.1), #fff);
+    background-image:-ms-linear-gradient(rgba(110, 69, 143, 0.1), #fff);
+    background-image:-o-linear-gradient(rgba(110, 69, 143, 0.1), #fff);
+}
+
+.curdbgpro{
+    background-color:#fff;
+    background-image:linear-gradient(rgba(10, 77, 123, 0.1), #fff);
+    background-image:-webkit-linear-gradient(rgba(10, 77, 123, 0.1), #fff);
+    background-image:-moz-linear-gradient(rgba(10, 77, 123, 0.1), #fff);
+    background-image:-ms-linear-gradient(rgba(10, 77, 123, 0.1), #fff);
+    background-image:-o-linear-gradient(rgba(10, 77, 123, 0.1), #fff);
+}
+
+.goodnessseccont img{
+    width:100%;
+}
+
+.mlkpro{
+    color:#636362;
+    font-size:22px;
+    line-height:22px;
+    margin-bottom:15px;
+    width:43%;
+    margin:0 auto;
+    text-align:center;
+    
+}
+
+.goodnesssec a{
+    text-decoration: none;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    min-height: 100vh;
+    width: 100%;
+}
+.formp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 30%;
+    position: relative;
+
+}
+.form{
+    background: rgba(180, 180, 180, 0.1);
+    padding: 40px;  
+    min-width: 30%;
+    border-radius: 10px;
+    background-color: #f5f5f5; /* Light gray background */
+}
+.image {
+    position: relative;
+}
+
+.show-password-image,
+.show-password2-image {
+  position: absolute;
+  background-color: white;
+  right: 0px; /* Adjust the right positioning as needed */
+  top: 50%; /* Vertically center the icon */
+  transform: translateY(-50%); /* Center vertically */
+  display: none;
+}
+#id_password1:valid ~ .show-password-image,
+#id_password2:valid ~ .show-password2-image
+{
+    display: block;
+}
+
+/* Initially hide the image */
+
+.dont-have{
+    display: flex;
+    justify-content: space-between;
+}
+.change {
+    width: 80%;
+    padding: 50px;
+}
+.change #id_username,
+.change #id_email
+{
+    margin: 20px 0 ;
+    width: 80%;
+}

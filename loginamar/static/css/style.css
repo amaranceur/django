@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images/a.jpg);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    opacity: 0.3;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    justify-content: center;
+
+
+}
+.info {
+    margin: 20px;
+}
+.info input {
+    font-size: 1.3em;
+}

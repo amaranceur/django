@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<table class="table table-hover">
+    <thead class="table-warning">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Saller</th>
+        <th scope="col">Price</th>
+        <th scope="col"></th>
+
+      </tr>
+    </thead>
+    <tbody>
+        
+        {% if product %}
+            
+        {% for cs in product  %}
+  
+      <tr>
+        
+        <th scope="row">{{ cs.id }}</th>
+        <td>{{ cs.name }}</td>
+        <td>{{ cs.quantity }}</td>
+        <td>{{ cs.saller }}</td>
+        <td>{{ cs.price }}</td>
+        <td><a href="{% url 'details' 'Product'  cs.id %}">Details </a></td>
+             
+       
+      </tr>
+      {% endfor %}
+
+      {% endif %}
+
+    </tbody>
+  </table>
+  <a href="{% url 'add_p' %}" class="btn btn-primary">Add Product</a>
+{% endblock content %}
+    

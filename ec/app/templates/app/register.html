@@ -1,0 +1,107 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+<div class="register">
+    <form action="" method="POST" class="formp">
+        {% csrf_token %}
+          <h2>Sign up</h2>
+          <div class="form">
+            {# Display errors for the email field #}
+          <div class="text-left mb-2"> Email</div>
+            {{ form.email }}
+
+          {# Display errors for the username field #}
+            <div class="text-left mb-2"> Username</div>
+            {{ form.username }}
+
+            {# Display errors for the password1 field #}
+          <div class="text-left mb-2"> Password</div>
+          <div class="image">
+            {{ form.password1 }}
+            <img  src='{% static 'app/images/2540381-200.png' %}' width="30px" height="30px" alt="" class="show-password-image">
+          </div>        
+          <div class="text-left mb-2"> Confirm Password</div>
+          <div class="image">
+            {{ form.password2 }}
+            <img  src='{% static 'app/images/2540381-200.png' %}' width="30px" height="30px" alt="" class="show-password2-image">
+          </div> 
+          <div class="dont-have">      
+            <button type="submit" class="btn btn-navbar-dark bg-success mt-3 ">Register</button>
+            <a href="{% url 'login' %}" >You Already have account</a>
+          </div>  
+        </div> 
+        {% if form.errors %}
+          
+       
+          
+        <ul style="list-style: none;">
+       
+       {% if form.email.errors %}
+       <li>
+          <div class="alert alert-danger  alert-dismissible fade show" role="alert">
+            {{form.email.errors}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </li>
+       {% endif %}
+           
+       
+       {% if form.username.errors %}
+      <li>
+        <div class="alert alert alert-danger alert-dismissible fade show" role="alert">
+            {{form.username.errors}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> 
+      </li>
+
+       {% endif %}
+       
+       {% if form.password1.errors %}
+        <li>
+             <div class="alert alert alert-danger alert-dismissible fade show" role="alert">
+            {{form.password1.errors}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </li> 
+
+       {% endif %}
+       {% if form.password2.errors %}
+       <li>
+        <div class="alert alert-danger d-flex align-items-center" role="alert">          
+            {{form.password2.errors}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </li>
+       {% endif %}
+        </ul>
+        {% endif %}
+    </form>
+</div>
+<script>
+
+let password =document.getElementById("id_password1");
+let password2 = document.getElementById("id_password2")
+let image = document.images;
+let img1 = image[1] 
+let img2 = image[2]
+function togglePassword( ps  , img) {
+  if (ps.type == 'password') {
+    ps.type = 'text';
+    img.src = '{% static 'app/images/images.png' %}';  } 
+    
+  else {
+    ps.type = 'password';
+    img.src = '{% static 'app/images/2540381-200.png' %}';
+  }
+}
+
+img1.addEventListener('click',function() {
+  togglePassword( password,img1)
+})
+img2.addEventListener('click',function() {
+  togglePassword( password2 , img2)
+})
+
+
+</script>
+{% endblock main-content %}

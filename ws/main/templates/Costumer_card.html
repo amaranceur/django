@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container">
+<div class="card">
+    <h5 class="card-header"><strong>Full Name:  </strong>{{ obj.name  }} {{ obj.prename }}</h5>
+    <div class="card-body">
+     <h5 class="card-title"> <strong>Email:  </strong>{{obj.email}}</h5>
+     <h5 class="card-title"> <strong>Cart:  </strong>{{obj.carte}}</h5>
+      <h5 class="card-title"><strong>Zipcode:  </strong>{{obj.zipcode}}</h5>
+
+    </div>
+  </div>
+  <a href="{% url 'managment' 'Costumer' %}" class="btn btn-secondary">Back</a>
+  <a href="{% url 'managment' 'Costumer' %}" class="btn btn-warning">Update</a>
+  <a href="{% url  'delete' 'Costumer' obj.id %}" class="btn btn-danger">Delete</a>
+</div>
+{% endblock content %}
+    

@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="buyproduct">
+    <div class="img">
+        <img src="{{ product.image.url }}" alt="" >
+    </div>
+    <div class="info">
+        <h1>{{ product.name }}</h1>
+        <h3>Quantity available {{ product.quantity }}</h3>
+        <h4>Price {{ product.price }}</h4>
+        <form action="{% url 'addproduct' product.id %}" method="POST">
+            {% csrf_token %}
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" min="1" max="100" step="1" placeholder="Enter quantity">
+            <button type="submit" class="btn btn-secondary">Add to cart</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

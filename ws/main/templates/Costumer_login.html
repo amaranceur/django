@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% if user_is_authenticated %}
+    
+ {% else %}   
+ <div class="body">
+<div class="box">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h2>Sign in </h2>
+        <div class="inputbox">
+            <input type="text" required name='username'> 
+            <span>Username</span>
+            <i></i>
+        </div>
+        <div class="inputbox">
+            <input type="password" required name='password'>
+            <span>Password</span>
+            <i></i>
+        </div>
+        <div class="links">
+            <a href="#">Forget password</a>
+        </div>
+        <input type="submit" value="Login">
+    </form>
+</div>
+</div>
+{% endif %}
+{% endblock content %}

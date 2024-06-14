@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+body
+{
+overflow-x: hidden;
+box-sizing: border-box;
+min-height: 100vh;
+background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/header-image.png) ;
+}
+.header{
+    padding: 20px 40px;
+}
+.header img{
+    width: 160px;
+}
+.loginbox{
+    position: absolute;
+    min-height: 100vh;
+    background: rgba(0,0,0,0.7);
+    min-width: 300px;
+    left: 450px;
+}
+.container{
+    position: relative;
+    color: #fff;
+    padding: 50px 60px;
+}
+.container h1{
+    margin-bottom: 30px;
+}
+.container .box{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+}
+.container .box input {
+    background: rgb(65, 65, 65);
+    outline: none;
+    border: none;
+    color:#fff;
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    min-width: 250px;
+    padding: 13px 10px ;
+
+}
+.container .box label{
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    pointer-events: none;
+    color: #ffffff88;
+    transition: .2s ease;
+    
+}
+.container .box input:valid ~ label,
+.container .box input:focus ~ label
+{
+    transform: translateY(-60%);
+    font-size: .7em;
+}
+.btn{
+    margin: 40px 0px 0px;
+    
+}
+.btn button{
+    display: flex;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 110px;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container .help{
+    position: absolute;
+}
+.container .help label {
+    color: #ffffff88;
+}
+.container .help h4{
+    position: relative;
+    left: 180px;
+    bottom: 20px;
+}

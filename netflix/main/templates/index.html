@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>netflix</title>
+</head>
+<body>
+
+    <div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('{% static "images/header-image.png" %}');">
+        <nav>
+        <img src="{% static 'images/logo.png' %}" class="logo">
+        <div>
+            <button class="image-btn">English <img src="{% static 'images/down-icon.png' %}" ></button>
+            <button><a href="D:\C.S\front-end\netflix-login-form\index.html">Sign in</a></button>
+        </div>
+      </nav>
+      <div class="header-content">
+        <h1>Unlimited movies, TV shows, and more
+        </h1>
+        <h3>Watch anywhere. Cancel anytime.
+        </h3>
+        <p>Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <form class="signup">
+            <input type="email " required>
+            <label>Email address </label>
+            <button type="submit">Get started ></button>
+        </form>
+      </div>
+   </div>
+   <section class="section1"> 
+        <div class="text">
+            <h1>Enjoy on your TV
+            </h1>
+            <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+            </p>
+        </div>
+       <img src="{% static 'images/feature-1.png' %}" class="image11" >
+   </section>
+   <section class="section2">
+    <img src="{% static 'images/feature-2.png' %}" class="image11" >
+    <div class="text2">
+        <h1>Download your shows to watch offline
+        </h1>
+        <p>Save your favorites easily and always have something to watch
+        </p>
+    </div>
+</section>
+<section class="section1"> 
+    <div class="text">
+        <h1>Watch everywhere
+           
+        </h1>
+        <p> Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
+        </p>
+    </div>
+   <img src="{% static 'images/feature-3.png' %}" class="image11" >
+</section>
+<section class="section2"> 
+    <img src="{% static 'images/feature-4.png' %}" class="image11" >
+    <div class="text2">
+        <h1>Create profiles for kids        
+        </h1>
+        <p> Send kids on adventures with their favorite characters in a space made just for them—free with your membership.
+        </p>
+    </div>
+</section>
+<div class="help">
+    <h1> Frequently Asked Questions
+    </h1>
+    <ul class="accordion">
+        <li><input type="radio" name="accordion" id="first">
+        <label for="first"> What is Netflix?</label>
+        <div class="content">
+            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+
+            You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+        </div>
+        </li>
+        <!-- Other FAQ items here -->
+    </ul>
+    <p>Ready to watch? Enter your email to create or restart your membership.
+    </p>
+</div>
+<form class="signup2">
+    <input type="email " required>
+    <label>Email address </label>
+    <button type="submit">Get started ></button>
+</form>
+<div class="contact">
+    <h4>Questions? Contact us.</h4>
+    <div class="row">
+        <div class="column">
+            <a href="#">FAQ</a>
+            <a href="#">Media Center</a>
+            <a href="#">Ways to watch</a>
+            <a href="#">Cookie prefernces</a>
+            <a href="#">Speed Test</a>
+        </div>
+        <div class="column">
+            <a href="#">Help Center</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Legal Notices</a>
+        </div>
+        <div class="column">
+            <a href="#">Account</a>
+            <a href="#">Jobs</a>
+            <a href="#">Privacy</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Only netflix</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

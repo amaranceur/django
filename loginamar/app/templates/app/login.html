@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' href="{% static 'css/style2.css' %}">
+    <title>sign up</title>
+</head>
+<body style="background: url('{% static 'images/a.jpg' %}') center no-repeat ;">
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h2>Login </h2>
+          <div class="continfo">
+            <div class="info">
+            <input type="text" name='username' ,  required>
+            <label for="username">username or email address</label>
+             </div>
+            <div class="info">
+            <input type="Password" name='pass1' ,  required>
+            <label for="pass1">Password</label>
+           </div>
+        </div>
+          <div class="btn">
+            <button type="submit">Sign Up</button>
+            <br>
+            <a href="{% url 'signup' %}">You already have account</a>
+        </div>
+        </form>   
+    <div class="message">
+        <ul>
+            {% for message in messages %}
+                <li class={% str(i) % }>{{ message }}</li> 
+            {% endfor %}
+        </ul>
+    </div>

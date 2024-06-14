@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block name %}
+
+{% for x in pro  %}
+    <h1> {{x.name}}</h1>
+    <p>{{x.price}}</p>
+{% endfor %}
+    
+{% endblock name %}

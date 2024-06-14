@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<table class="table table-hover">
+    <thead class="table-warning">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Prename</th>
+        <th scope="col">Email</th>
+        <th scope="col">Carte</th>
+        <th scope="col">Zipcode</th>
+        <th scope="col"></th>
+
+      </tr>
+    </thead>
+    <tbody>
+        
+        {% if sallers %}
+            
+        {% for cs in sallers  %}
+  
+      <tr>
+        
+        <th scope="row">{{ cs.id }}</th>
+        <td>{{ cs.name }}</td>
+        <td>{{ cs.prename }}</td>
+        <td>{{ cs.email }}</td>
+        <td>{{ cs.carte }}</td>
+        <td>{{ cs.zipcode }}</td>
+        <td><a href="{% url 'details' 'Saller'  cs.id %}">Details </a></td>
+             
+       
+      </tr>
+      {% endfor %}
+
+      {% endif %}
+
+    </tbody>
+  </table>
+  <a href="{% url 'add_s' %}" class="btn btn-primary">Add Saller</a>
+{% endblock content %}
+    

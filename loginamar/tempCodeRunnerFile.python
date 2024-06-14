@@ -1,0 +1,4 @@
+ch="fly me   to   the  moon  "
+a=ch.split()
+c=" a".join(a)
+print(c)

@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('static/images/header-image.png');
+    background-position: center;
+    background-size: cover;
+    padding: 10px 8%;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+nav button a {
+    text-decoration: none;
+    color: white;
+}
+
+nav .image-btn{
+    display: inline-block;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+nav .image-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+.header-content h3 {
+   font-weight: 400;
+   margin-bottom: 20px;
+}
+
+.signup{
+    position: relative;
+    margin-top: 40px;
+   min-height: 80px;
+}
+.signup input{
+    background: #0707072d;
+    border-radius: 4px;
+    font-size: 1.3em;
+    color: #ffffffde;
+    padding: 10px 15px; 
+    border:  grey 1px solid;
+    min-width: 400px;
+}
+.signup label
+{
+    position: absolute;
+    left: 130px;
+    transform: translate(-78.5px,15px);
+    color: #ffffff91;
+    font-style: normal;
+    pointer-events: none;
+    transition: 0.3s linear;
+}
+.signup input:focus ~ label ,
+.signup input:valid ~label
+{
+    transform: translateY(20%);
+    font-size: .764em;
+    left: 50px;
+}
+.signup button{
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: #db0001;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.signup button:hover{
+    opacity: 0.893463;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 30px 40px;
+    border-top: #4b4a4a 6px solid ;
+}
+
+
+.section1 .text{
+    position: relative;
+    top: 47%;
+    left: 37%;
+    transform: translate(-60%,-10%);
+   min-width: 550px;
+}
+.section1 .text h1{
+    font-size: 2.5em;
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+.section1 .text p{
+    font-size: 1.5em;
+}
+section img{
+    height: 400px;
+    width: 450px;
+    margin:20px 50px;
+}
+.section2 .text2 
+{
+    position: relative;
+    top: 40%;
+    right: 10%;
+    transform: translate(10%,-10%);
+    width: 550px;
+}
+.section2 .text2 h1
+{
+    font-size: 2.5em;
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+.section2 .text2 p{
+    font-size: 1.5em;
+}
+.help {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0; /* Remove the left and right margin */
+    border-top: 6px solid #303030;
+}
+.help h1{
+    font-size: 2.7em;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+}
+.help input{
+    display: none;
+}
+.help .accordion{
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1000px;
+}
+.help .accordion li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.help label{
+    display: flex;
+    align-items: center;
+    padding: 17px;
+    font-size: 22px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.help label::after {
+    content: '+';
+    font-size: 2em;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    transition: transform .5s;
+}
+.help .content{
+    padding: 0 20px;
+    max-height: 0;
+    font-size: 1.4em;
+    overflow: hidden;
+    background: #303030;
+    
+    transition: max-height 0.5s ease,padding .1s ease;
+}
+.accordion input:checked + label + .content{
+    max-height: 1000px;
+    padding: 30px 20px;
+    background: #303030;
+    
+
+}
+
+.accordion label:hover{
+    background: #4b4a4a ;
+
+}
+.accordion input:checked + label::after{
+    transform: rotate(35deg);
+}
+
+.help p {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: 400;
+
+}
+.signup2{
+    position: relative;
+    margin-top: 40px;
+    left: 400px;
+    min-height: 80px;
+}
+.signup2 input{
+    background: #0707072d;
+    border-radius: 4px;
+    font-size: 1.1em;
+    color: #ffffffde;
+    padding: 10px 15px; 
+    border:  grey 1px solid;
+    min-width: 400px;
+}
+.signup2 label
+{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    color: #ffffff91;
+    font-size: .95em;
+    font-style: normal;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+}
+.signup2 input:focus ~ label ,
+.signup2 input:valid ~label
+{
+    transform: translateY(-40%);
+    font-size: .764em;
+    
+
+}
+.signup2 button{
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: #db0001;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.signup2 button:hover{
+    opacity: 0.893463;
+}
+.contact {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    border-top: #303030 6px solid;
+    min-height: 400px;
+    
+}
+.contact h4{
+    margin-top:20px ;
+    position: relative;
+    left: 130px;
+    color: #a3a3a3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.contact .row{
+    display: flex;
+    margin-top: 40px;
+}
+.contact .row .column{
+    display: flex;
+    flex-direction: column;
+    margin:  0 130px;
+}
+.contact .row .column a {
+    text-decoration: underline;
+    color: #a3a3a3;
+    margin-bottom: 20px;
+    font-size: .8em;
+}

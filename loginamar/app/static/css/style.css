@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px 0;
+}
+
+form {  
+    background: rgba(180, 180, 180, 0.1);
+    padding-bottom: 20px;
+}
+
+form h2 {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    margin: 20px;
+}
+
+.info {
+    position: relative;
+    left: 10px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    margin: 20px;
+}
+
+.info input {
+    padding: 5px 10px;
+    width: 320px;
+    font-size: 1.4em;
+    outline: none;
+    border-radius: 5px;
+}
+
+.info label {
+    position: absolute;
+    left: 20px;
+    bottom:  24px;
+    pointer-events: none;
+    transition: transform 0.3s ease ;
+}
+
+.info input:focus ~ label,
+.info input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: .6em;
+
+}
+.btn button {
+    position: relative;
+    left: 40px;
+    display: flex;
+    text-align: center;
+    padding: 10px 135px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 20px;
+    transition: .3s ease;
+    color: aliceblue;
+    cursor: pointer;
+}
+.btn button:hover {
+ border-color: rgb(255, 224, 183);
+}
+.btn a {
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+    left: 70px;
+    padding: 20px;
+}
+.btn a:hover {
+    text-decoration: underline;
+}
+.message{
+    color: wheat;
+}
+.message ul li {
+    position: absolute;
+    left: 300px;
+    bottom:  0;
+}

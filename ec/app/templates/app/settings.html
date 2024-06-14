@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+<form method="post " >  
+    {% csrf_token %}
+<div class="change">
+<label for="">Username</label><br>
+{{ form.username }}
+<br>
+<label for="">Email</label><br>
+{{ form.email }}
+<br>
+<a href="{% url 'change_password' %}">Change Password</a>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+{% endblock  %}

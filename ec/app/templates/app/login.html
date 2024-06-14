@@ -1,0 +1,59 @@
+{% extends 'app/base.html' %}
+{% block main-content %}
+{% load static%}
+<div class="register">
+    <form action="" method="POST" class="formp">
+        {% csrf_token %}
+          <h2>Login</h2>
+          <div class="form">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <div class="image">
+               <input type="password" class="form-control mt-2" name='password' id="id_password1">
+                <img  src='{% static 'app/images/2540381-200.png' %}' width="30px" height="30px" alt="" class="show-password-image ">
+            </div>  
+            <div class="dont-have">
+            <button type="submit" class="btn btn-navbar-dark bg-success mt-3">Login</button>
+            <a href="{% url 'register' %} " style="text-decoration: none; margin-top: 20px;">You dont have account</a>
+          </div>
+      
+          </div>
+            
+            {% if messages %}      
+              
+          {% for message in messages  %}
+              <div class="alert alert-danger d-flex align-items-center  mt-3" role="alert">      
+                <button type="button" class="btn-close mr-5" data-bs-dismiss="alert" aria-label="Close"></button>    
+                <p style="padding-left: 30px; text-align: center; "> {{message}}</p>
+              </div>
+          {% endfor %}
+          {% endif %}
+    </form>
+      
+</div>
+<script>
+
+  let password =document.getElementById("id_password1");
+
+  let image = document.images[1];
+
+  function togglePassword( ps  , img) {
+    if (ps.type == 'password') {
+      ps.type = 'text';
+      img.src = '{% static 'app/images/images.png' %}';  } 
+      
+    else {
+      ps.type = 'password';
+      img.src = '{% static 'app/images/2540381-200.png' %}';
+    }
+  }
+  
+  image.addEventListener('click',function() {
+    togglePassword( password,image)
+  })
+
+  
+  
+  </script>
+{% endblock main-content %}

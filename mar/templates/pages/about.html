@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{%load static %}
+{% block name %}
+<title>about</title>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{lf}}
+
+<br>
+<input type="submit" value='save'>
+</form>
+
+{% endblock name %}
+    
